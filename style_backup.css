@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f5f1;
+    color: #222;
+}
+
+header {
+    background: white;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.hero {
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    background: linear-gradient(120deg, #e8dfd2, #f8f6f2);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.subtitle {
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.button,
+.contact button,
+.product button {
+    display: inline-block;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.catalog,
+.about,
+.contact {
+    padding: 80px 7%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.section-text {
+    color: #777;
+    margin-bottom: 40px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.product-image {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 90px;
+    background: #eee9e1;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.product-info strong {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.product button {
+    width: 100%;
+}
+
+.about {
+    background: white;
+}
+
+.advantages {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantages span {
+    font-size: 45px;
+}
+
+.advantages h3 {
+    margin: 15px 0 8px;
+}
+
+.advantages p {
+    color: #777;
+}
+
+.contact {
+    background: #e8dfd2;
+}
+
+.contact p {
+    margin: 15px 0 25px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 500px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .products,
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+}

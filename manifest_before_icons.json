@@ -1,0 +1,9 @@
+{
+  "name": "LUXORA — Премиальная мебель",
+  "short_name": "LUXORA",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#111111",
+  "description": "LUXORA — каталог премиальной мебели"
+}

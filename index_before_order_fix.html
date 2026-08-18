@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUXORA — Премиальная мебель</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="#" class="logo">
+        LUX<span>ORA</span>
+    </a>
+
+    <nav class="nav">
+        <a href="#catalog">Каталог</a>
+        <a href="#collections">Коллекции</a>
+        <a href="#about">О нас</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            PREMIUM FURNITURE
+        </div>
+
+        <h1>
+            Мебель,<br>
+            которая создаёт<br>
+            <i>атмосферу дома.</i>
+        </h1>
+
+        <p>
+            Современный дизайн, комфорт и качество
+            для вашего пространства.
+        </p>
+
+        <a href="#catalog" class="hero-button">
+            Смотреть коллекцию
+            <span>→</span>
+        </a>
+
+    </div>
+
+    <div class="hero-card">
+
+        <div class="hero-card-image">
+            <div class="chair"></div>
+        </div>
+
+        <div class="hero-card-info">
+            <span>НОВАЯ КОЛЛЕКЦИЯ</span>
+            <strong>Modern Living</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="categories" id="collections">
+
+    <div class="section-heading">
+        <span>КАТЕГОРИИ</span>
+        <h2>Выберите свой стиль</h2>
+    </div>
+
+    <div class="category-grid">
+
+        <a href="#catalog" class="category">
+            <div class="category-icon sofa-icon"></div>
+            <h3>Диваны</h3>
+            <span>Смотреть →</span>
+        </a>
+
+        <a href="#catalog" class="category">
+            <div class="category-icon bed-icon"></div>
+            <h3>Спальня</h3>
+            <span>Смотреть →</span>
+        </a>
+
+        <a href="#catalog" class="category">
+            <div class="category-icon table-icon"></div>
+            <h3>Столы и стулья</h3>
+            <span>Смотреть →</span>
+        </a>
+
+        <a href="#catalog" class="category">
+            <div class="category-icon cabinet-icon"></div>
+            <h3>Шкафы</h3>
+            <span>Смотреть →</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<section class="category-section">
+
+    <div class="category-header">
+        <p class="subtitle">LUXORA COLLECTION</p>
+        <h2>Выберите категорию</h2>
+        <p class="section-text">
+            Найдите мебель для каждой комнаты вашего дома
+        </p>
+    </div>
+
+    
+
+
+<div class="category-filters" id="categoryFilters">
+
+        <button class="category-btn active" onclick="filterProducts('all', this)">
+            Все товары
+        </button>
+
+        <button class="category-btn" onclick="filterProducts('sofa', this)">
+            Диваны
+        </button>
+
+        <button class="category-btn" onclick="filterProducts('bed', this)">
+            Кровати
+        </button>
+
+        <button class="category-btn" onclick="filterProducts('table', this)">
+            Столы
+        </button>
+
+        <button class="category-btn" onclick="filterProducts('cabinet', this)">
+            Шкафы
+        </button>
+
+    </div>
+
+</section>
+
+<section class="catalog" id="catalog">
+
+<div class="catalog-tools">
+
+    <div class="search-box">
+        <span>🔎</span>
+        <input
+            type="search"
+            id="catalogSearch"
+            placeholder="Поиск мебели..."
+            oninput="filterCatalog()"
+        >
+    </div>
+
+    <div class="price-box">
+        <label for="maxPrice">Максимальная цена</label>
+        <select id="maxPrice" onchange="filterCatalog()">
+            <option value="0">Любая цена</option>
+            <option value="500">До 500 ₾</option>
+            <option value="1000">До 1 000 ₾</option>
+            <option value="1500">До 1 500 ₾</option>
+            <option value="2000">До 2 000 ₾</option>
+            <option value="3000">До 3 000 ₾</option>
+        </select>
+    </div>
+
+    <div class="sort-box">
+        <label for="sortProducts">Сортировка</label>
+        <select id="sortProducts" onchange="sortCatalog()">
+            <option value="default">По умолчанию</option>
+            <option value="low">Сначала дешевле</option>
+            <option value="high">Сначала дороже</option>
+        </select>
+    </div>
+
+</div>
+
+    <div class="section-heading center">
+        <span>ПОПУЛЯРНОЕ</span>
+        <h2>Избранные товары</h2>
+        <p>
+            Подборка мебели, которая сейчас пользуется
+            особой популярностью.
+        </p>
+    </div>
+
+
+    <div class="products">
+
+        <article class="product sofa">
+
+            <div class="product-photo sofa">
+                <span class="badge">NEW</span>
+            </div>
+
+            <div class="product-info">
+
+                <div>
+                    <h3>Milano Sofa</h3>
+                    <p>Современный диван</p>
+                </div>
+
+                <strong>1 200 ₾</strong>
+
+                <button onclick="contact('Milano Sofa')">
+                    Подробнее
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="product bed">
+
+            <div class="product-photo bed">
+                <span class="badge sale">SALE</span>
+            </div>
+
+            <div class="product-info">
+
+                <div>
+                    <h3>Royal Bed</h3>
+                    <p>Двуспальная кровать</p>
+                </div>
+
+                <strong>950 ₾</strong>
+
+                <button onclick="contact('Royal Bed')">
+                    Подробнее
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="product table">
+
+            <div class="product-photo table">
+            </div>
+
+            <div class="product-info">
+
+                <div>
+                    <h3>Nordic Table</h3>
+                    <p>Обеденный стол</p>
+                </div>
+
+                <strong>650 ₾</strong>
+
+                <button onclick="contact('Nordic Table')">
+                    Подробнее
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <article class="product cabinet">
+
+            <div class="product-photo cabinet">
+            </div>
+
+            <div class="product-info">
+
+                <div>
+                    <h3>Linea Cabinet</h3>
+                    <p>Современный шкаф</p>
+                </div>
+
+                <strong>1 450 ₾</strong>
+
+                <button onclick="contact('Linea Cabinet')">
+                    Подробнее
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <div class="about-content">
+
+        <span>О НАС</span>
+
+        <h2>
+            Красивое пространство
+            начинается с правильной мебели.
+        </h2>
+
+        <p>
+            Мы собираем интересные предложения мебели
+            от производителей и помогаем клиентам найти
+            подходящий вариант для своего дома.
+        </p>
+
+        <div class="advantages">
+
+            <div>
+                <strong>01</strong>
+                <span>Современный дизайн</span>
+            </div>
+
+            <div>
+                <strong>02</strong>
+                <span>Проверенные предложения</span>
+            </div>
+
+            <div>
+                <strong>03</strong>
+                <span>Помощь в выборе</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <div>
+
+        <span>НУЖНА ПОМОЩЬ?</span>
+
+        <h2>
+            Подберём мебель
+            для вашего дома.
+        </h2>
+
+        <p>
+            Напишите нам — расскажите, что вы ищете.
+        </p>
+
+        <button onclick="contact('Консультация по мебели')">
+            Написать нам →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<section class="contact-section" id="contactSection">
+
+    <div class="contact-inner">
+
+        <div class="contact-text">
+            <p class="subtitle">LUXORA CONTACT</p>
+
+            <h2>Есть вопросы?</h2>
+
+            <p>
+                Свяжитесь с нами — поможем выбрать мебель,
+                уточнить наличие и оформить заказ.
+            </p>
+        </div>
+
+        <div class="contact-actions">
+
+            <a
+                class="contact-btn whatsapp-btn"
+                href="https://wa.me/995571696968"
+                target="_blank"
+            >
+                <span>💬</span>
+                Написать в WhatsApp
+            </a>
+
+            <a
+                class="contact-btn phone-btn"
+                href="tel:+995571696968"
+            >
+                <span>📞</span>
+                Позвонить нам
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-logo">
+        LUXORA
+    </div>
+
+    <p>
+        Современная мебель для современного дома.
+    </p>
+
+    <small>
+        © 2026 LUXORA
+    </small>
+
+</footer>
+
+
+
+<div class="product-modal" id="productModal">
+    <div class="modal-overlay" onclick="closeProduct()"></div>
+
+    <div class="modal-card">
+
+        <button class="modal-close" onclick="closeProduct()">×</button>
+
+        <div class="modal-image" id="modalImage"></div>
+
+        <div class="modal-content">
+            <div class="modal-category" id="modalCategory">
+                LUXORA COLLECTION
+            </div>
+
+            <h2 id="modalTitle">Название товара</h2>
+
+            <div class="modal-price" id="modalPrice">
+                1 200 ₾
+            </div>
+
+            <p id="modalDescription">
+                Описание товара
+            </p>
+
+            <div class="modal-details">
+                <div>
+                    <span>Материал</span>
+                    <strong>Премиум</strong>
+                </div>
+
+                <div>
+                    <span>Доставка</span>
+                    <strong>По Грузии</strong>
+                </div>
+
+                <div>
+                    <span>Наличие</span>
+                    <strong>Уточнить</strong>
+                </div>
+            </div>
+
+            <button class="modal-whatsapp" id="modalWhatsApp">
+                💬 Узнать наличие в WhatsApp
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniMarket — Мебель для дома</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">FurniMarket</div>
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#catalog">Каталог</a>
+        <a href="#about">О нас</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <p class="subtitle">МЕБЕЛЬ ДЛЯ ВАШЕГО ДОМА</p>
+        <h1>Красивый дом<br>начинается с мебели</h1>
+        <p>
+            Выбирайте удобную и стильную мебель
+            для дома по выгодным ценам.
+        </p>
+        <a href="#catalog" class="button">Смотреть каталог</a>
+    </div>
+</section>
+
+<section class="catalog" id="catalog">
+    <h2>Популярные товары</h2>
+    <p class="section-text">Выберите мебель, которая подходит именно вам</p>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="product-image">🛋️</div>
+            <div class="product-info">
+                <h3>Современный диван</h3>
+                <p>Удобный диван для гостиной.</p>
+                <strong>1 200 ₾</strong>
+                <button onclick="contact('Современный диван')">
+                    Узнать подробнее
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image">🛏️</div>
+            <div class="product-info">
+                <h3>Двуспальная кровать</h3>
+                <p>Стильная кровать для спальни.</p>
+                <strong>950 ₾</strong>
+                <button onclick="contact('Двуспальная кровать')">
+                    Узнать подробнее
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image">🪑</div>
+            <div class="product-info">
+                <h3>Обеденный стол</h3>
+                <p>Современный стол для кухни.</p>
+                <strong>650 ₾</strong>
+                <button onclick="contact('Обеденный стол')">
+                    Узнать подробнее
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>Почему выбирают нас?</h2>
+
+    <div class="advantages">
+        <div>
+            <span>🚚</span>
+            <h3>Доставка</h3>
+            <p>Поможем организовать доставку мебели.</p>
+        </div>
+
+        <div>
+            <span>💰</span>
+            <h3>Выгодные цены</h3>
+            <p>Подбираем интересные предложения.</p>
+        </div>
+
+        <div>
+            <span>🤝</span>
+            <h3>Надёжные продавцы</h3>
+            <p>Работаем с проверенными компаниями.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Есть вопросы?</h2>
+    <p>Напишите нам, и мы поможем подобрать мебель.</p>
+    <button onclick="contact('Общий вопрос')">
+        💬 Связаться
+    </button>
+</section>
+
+<footer>
+    <p>© 2026 FurniMarket</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
